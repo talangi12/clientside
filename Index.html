@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Portfolio | University Student</title>
+  <style>
+    :root {
+      --primary: #0f172a;
+      --accent: #2563eb;
+      --bg: #f8fafc;
+      --text: #1e293b;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 18px;
+      scroll-snap-type: y mandatory;
+      overflow-y: scroll;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), #020617);
+      color: #fff;
+      padding: 120px 20px;
+      text-align: center;
+      animation: fadeDown 1.2s ease;
+    }
+
+    header h1 { font-size: 3.5rem; margin-bottom: 20px; }
+    header p { font-size: 1.4rem; max-width: 900px; margin: auto; }
+
+    nav {
+      position: sticky;
+      top: 0;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 20px 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      z-index: 100;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 1.05rem;
+      position: relative;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 3px;
+      background: var(--accent);
+      left: 0;
+      bottom: -6px;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after { width: 100%; }
+
+    section {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+      min-height: 100vh;
+      padding: 120px 30px;
+      max-width: 1300px;
+      margin: auto;
+      animation: fadeUp 0.8s ease;
+      scroll-snap-align: start;
+    }
+
+    .card {
+      background: #fff;
+      padding: 70px;
+      border-radius: 18px;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+      animation: scaleIn 0.8s ease;
+    }
+
+    h2 {
+      color: var(--primary);
+      font-size: 2.6rem;
+      margin-bottom: 25px;
+    }
+
+    p { max-width: 1000px; }
+
+    ul { padding-left: 25px; }
+    li { margin-bottom: 14px; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      font-weight: 500;
+    }
+
+    footer {
+      text-align: center;
+      padding: 50px 20px;
+      background: #020617;
+      color: #fff;
+      margin-top: 80px;
+      font-size: 1rem;
+    }
+
+    button {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 15px 35px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      margin-top: 20px;
+    }
+
+    button:hover { opacity: 0.9; }
+
+    /* Animations */
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes scaleIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+
+<marquee behavior="scroll" direction="left" scrollamount="8" style="background: linear-gradient(90deg, #2563eb, #0f172a); color: white; padding: 15px; font-size: 1.1rem; font-weight: 600;">
+  Kleannat Chalvine's website you're welcome to share your ideas with me, and if you have any questions ,please dont hesitate to ask me.
+</marquee>
+
+<header>
+  <h1>My Personal Portfolio</h1>
+  <p>A professional overview of my life journey, academic growth, skills, and future aspirations.</p>
+</header>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#childhood">Childhood</a>
+  <a href="#education">Education</a>
+  <a href="#skills">Skills</a>
+  <a href="#future">Future</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="home" style="background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f');">
+  <div class="card">
+    <h2>Introduction</h2>
+    <p>
+      I am a motivated university student with a strong passion for technology, problem‑solving, and continuous personal growth.
+      Over the years, I have developed a keen interest in how digital solutions can improve efficiency, communication, and everyday life.
+    </p>
+    <p>
+      This website serves as my digital portfolio, documenting my life journey from childhood to my current academic pursuits.
+      It highlights not only my educational background, but also the skills, values, and aspirations that define who I am today.
+    </p>
+    <p>
+      My long‑term objective is to grow into a well‑rounded professional who combines technical competence with integrity, creativity, and a strong work ethic.
+    </p>
+  </div>
+</section>
+
+<section id="childhood" style="background-image: url('https://images.unsplash.com/photo-1504151932400-72d4384f04b3');">
+  <div class="card">
+    <h2>Childhood & Background</h2>
+    <img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c" alt="Family and childhood" style="width:100%; border-radius:16px; margin:30px 0;">
+    <audio controls style="width:100%; margin-bottom:25px;">
+      <source src="BENSOUL X BIEN - EXTRA PRESSURE OFFICIAL MUSIC VIDEO_1757618298870.mp3" type="audio/mpeg">
+    </audio>
+    <p>
+      My childhood played a significant role in shaping my character and outlook on life.
+      Growing up in a supportive and value‑driven environment taught me the importance of discipline, respect, and perseverance.
+    </p>
+    <p>
+      Through family interactions, early education, and community involvement, I learned essential life skills such as responsibility,
+      cooperation, and effective communication. These formative experiences laid the foundation for my academic and personal development.
+    </p>
+    <p>
+      The challenges and successes I encountered during my early years helped build resilience and a mindset focused on continuous improvement.
+    </p>
+  </div>
+</section>
+
+<section id="education" style="background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1');">
+  <div class="card">
+    <h2>Education</h2>
+    <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f" alt="Education and learning" style="width:100%; border-radius:16px; margin:30px 0;">
+    <video controls style="width:100%; border-radius:16px; margin-bottom:25px;">
+      <source src="https://www.instagram.com/reel/DUCbWaxkjzX/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ==" type="video/mp4">
+    </video>
+    <p>
+      My academic journey has been marked by dedication, curiosity, and a desire to excel.
+      I am currently pursuing higher education, where I have developed a strong foundation in both theoretical concepts and practical applications.
+    </p>
+    <p>
+      Throughout my studies, I have engaged in coursework, research assignments, presentations, and group projects that have strengthened
+      my analytical thinking, problem‑solving abilities, and teamwork skills.
+    </p>
+    <p>
+      In addition to formal education, I actively seek opportunities for self‑learning through online resources, tutorials, and hands‑on practice.
+    </p>
+  </div>
+</section>
+
+<section id="skills" style="background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c');">
+  <div class="card">
+    <h2>Skills & Talents</h2>
+    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c" alt="Coding and skills" style="width:100%; border-radius:16px; margin:30px 0;">
+    <video controls style="width:100%; border-radius:16px; margin-bottom:25px;">
+      <source src="https://www.instagram.com/reel/DUCbWaxkjzX/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ" type="video/mp4">
+    </video>
+    <p>
+      Over time, I have developed a diverse set of technical and personal skills that support my academic and professional growth.
+      These skills enable me to adapt to new challenges and contribute effectively in collaborative environments.
+    </p>
+    <div class="grid">
+      <div><strong>Web Development:</strong> HTML, CSS, JavaScript, responsive design</div>
+      <div><strong>Problem Solving:</strong> Logical reasoning and analytical thinking</div>
+      <div><strong>Communication:</strong> Clear written and verbal communication</div>
+      <div><strong>Teamwork:</strong> Collaboration in group projects and discussions</div>
+      <div><strong>Time Management:</strong> Balancing academics and personal development</div>
+      <div><strong>Creativity:</strong> Innovative thinking and design awareness</div>
+    </div>
+  </div>
+</section>
+
+<section id="achievements" style="background-image: url('https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d');">
+  <div class="card">
+    <h2>Achievements & Activities</h2>
+    <p>
+      Alongside my academic journey, I have actively participated in activities that have enhanced my practical skills and confidence.
+      These experiences demonstrate my commitment to growth beyond the classroom.
+    </p>
+    <ul>
+      <li>Completed multiple academic and personal web development projects</li>
+      <li>Successfully participated in group presentations and collaborative coursework</li>
+      <li>Engaged in independent learning through online courses and tutorials</li>
+      <li>Developed small projects to apply theoretical knowledge in practical scenarios</li>
+    </ul>
+  </div>
+</section>
+
+<section id="future" style="background-image: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee');">
+  <div class="card">
+    <h2>Future Aspirations</h2>
+    <p>
+      My future aspirations are centered around building a meaningful and impactful career in the technology sector.
+      I aim to continuously expand my technical knowledge while maintaining a strong ethical and professional foundation.
+    </p>
+    <p>
+      In the long term, I hope to work on innovative projects that address real‑world challenges,
+      contribute positively to organizations, and support community development through technology‑driven solutions.
+    </p>
+    <p>
+      I am committed to lifelong learning, adaptability, and personal excellence as I progress toward my career goals.
+    </p>
+  </div>
+</section>
+
+<section id="contact" style="background-image: url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4');">
+  <div class="card">
+    <h2>Contact Information</h2>
+    <img src="hero.jpg" alt="Kleannat Chalvine" style="width:220px; height:220px; object-fit:cover; border-radius:50%; display:block; margin:30px auto; box-shadow:0 20px 40px rgba(0,0,0,0.2);">
+    <p style="text-align:center; max-width:900px; margin:auto;">
+      I am open to academic collaboration, professional networking, project discussions, and idea sharing.
+      Feel free to reach out through any of the channels below.
+    </p>
+    <div style="margin-top:40px; font-size:1.1rem; line-height:2;">
+      <p><strong>Telephone:</strong> +254 798 959 954</p>
+      <p><strong>WhatsApp:</strong> +254 798 959 954</p>
+      <p><strong>Instagram:</strong> <a href="https://www.instagram.com/kleannat?igsh=ZTFzdHU4ZmlzOW00" target="_blank">@kleannat</a></p>
+      <p><strong>Facebook:</strong> <a href="https://www.facebook.com/share/1DHHJdn8Mx/" target="_blank">Kleannat Chalvine</a></p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/talangi12" target="_blank">github.com/talangi12</a></p>
+    </div>
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})">Back to Top</button>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Personal Portfolio | University Student</p>
+</footer>
+
+<script>
+  // Smooth snap scrolling enhancement
+  const sections = document.querySelectorAll('section');
+  let isScrolling = false;
+
+  window.addEventListener('wheel', (e) => {
+    if (isScrolling) return;
+    isScrolling = true;
+
+    const current = Math.round(window.scrollY / window.innerHeight);
+    const next = e.deltaY > 0 ? current + 1 : current - 1;
+
+    if (next >= 0 && sections[next]) {
+      sections[next].scrollIntoView({ behavior: 'smooth' });
+    }
+
+    setTimeout(() => isScrolling = false, 900);
+  }, { passive: true });
+</script>
+
+</body>
+</html>
